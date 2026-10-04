@@ -3,8 +3,8 @@
 ## Training completion
 | ID | Artifact | What it establishes |
 |---|---|---|
-| E01 | [Governance screenshot](Screenshot_gov_reg_badge.png) | Captured final exercise flag; room completion reported by Ron. Screenshot is not a full room progress/export record. |
-| E02 | [Chain Reaction screenshot](Screenshot_chain_reaction_badge.png) | Explicit room completion for ronrichardsonit, four tasks and 80 points. |
+| E01 | [Governance screenshot](../evidence/Screenshot_gov_reg_badge.png) | Captured final exercise flag; room completion reported by Ron. Screenshot is not a full room progress/export record. |
+| E02 | [Chain Reaction screenshot](../evidence/Screenshot_chain_reaction_badge.png) | Explicit room completion for ronrichardsonit, four tasks and 80 points. |
 | E03 | Consolidated user briefing in this chat | Additional forensic findings provided by Ron after working with Gemini; raw artifacts for these were not all supplied. |
 
 ## Investigation record
@@ -29,9 +29,9 @@ Training links: [Governance & Regulation](https://tryhackme.com/room/cybergovern
 ## Captured investigation artifacts
 
 ### E04 — Installed dependency
-![Installed typing-coreutils version](lab-dependency-version.png)
+![Installed typing-coreutils version](../evidence/lab-dependency-version.png)
 Shows version 1.6.4 in the suspicious package's manifest. The later continuation prompts record a command-entry error, not successful log searches.
 
 ### E05 — Obfuscated install script
-![Captured postinst.js source](lab-postinstall-script.png)
+![Captured postinst.js source](../evidence/lab-postinstall-script.png)
 Shows source printed with cat, including the decoding function and encoded strings. The final key assignment is cut off. This artifact corroborates source inspection but does not independently establish the complete decoded command or execution outcome.

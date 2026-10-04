@@ -1,68 +1,45 @@
-# Third-Party Vendor Risk Assessment & Software Supply Chain Governance
+# Healthcare AI Vendor Risk Assessment & Supply Chain Governance
 
-![Type](https://img.shields.io/badge/assessment-fictional_vendor-blue) ![Lab](https://img.shields.io/badge/Chain_Reaction-4_tasks%20%7C%2080_points-green) ![Status](https://img.shields.io/badge/production_approval-withheld-orange)
+**Ron Richardson | Healthcare GRC & IAM Portfolio — Project 2**
 
-**Ron Richardson | Healthcare GRC & IAM Portfolio — Project 2 | October 4, 2026**
+A fictional procurement assessment of **CogniScribe AI**, an ambient clinical documentation service that converts encounter audio into draft SOAP notes for clinician review and EHR integration. The assessment connects software supply-chain investigation lessons to evidence requests, clinical-data safeguards and procurement decisions.
 
-CogniScribe AI is a fictional ambient clinical documentation platform processing encounter audio into draft SOAP notes for EHR integration. This case study turns supply-chain investigation lessons into procurement evidence requests, risk decisions and enforceable release gates. No real vendor assessment, patient data or production testing is represented.
+## Technical foundation
 
-## Read by purpose
-| Deliverable | Reader and purpose |
+| Governance & Regulation — final exercise | Chain Reaction — completion |
 |---|---|
-| [Vendor security questionnaire](docs/Vendor_Security_Questionnaire.md) | Vendor/reviewers: twenty questions and required artifacts |
-| [Evidence-gap risk register](docs/Evidence_Gap_Risk_Register.md) | Risk owners: ten scenarios, assumptions, gaps, treatment and conditional residual scores |
-| [Executive procurement memo](docs/Executive_Recommendation_Memo.md) | CISO/committee: synthetic evaluation recommendation and production gates |
-| [Technical evidence](evidence/README.md) | Reviewers: completion screenshots, lab findings and confidence boundaries |
+| ![Governance final exercise](evidence/Screenshot_gov_reg_badge.png) | ![Chain Reaction completion](evidence/Screenshot_chain_reaction_badge.png) |
+| Room completion reported by Ron; image captures final exercise flag | Screenshot confirms four tasks completed and 80 points earned |
 
-## Training evidence
+The lab identified Axios 1.14.1 with a suspicious typing-coreutils 1.6.4 dependency and an installation hook invoking `node postinst.js`. Consolidated investigation notes describe an obfuscated downloader, HTTP C2 and shell-profile persistence. These findings motivate vendor review questions; they do not establish a CogniScribe AI compromise.
 
-### Chain Reaction — completion
-![Chain Reaction completion: four tasks and 80 points](evidence/Screenshot_chain_reaction_badge.png)
+See the [technical evidence record](docs/Technical_Evidence_Record.md) for screenshots, artifact values and distinctions between captured output and consolidated notes.
 
-### Governance & Regulation — final exercise
-![Governance and Regulation final exercise screenshot](evidence/Screenshot_gov_reg_badge.png)
-This captures the exercise flag; full room completion is user-reported.
+## Portfolio deliverables
 
-### Dependency investigation
-![Terminal showing typing-coreutils version 1.6.4](evidence/lab-dependency-version.png)
-The screenshot records the installed suspicious dependency and also captures an unfinished shell command. It does not demonstrate successful execution of every visible command.
-
-[View the captured postinstall script](evidence/lab-postinstall-script.png) and [read the evidence provenance](evidence/README.md). The script screenshot shows obfuscated source; its decoder key and complete decoded behavior are documented from consolidated notes rather than proved by this screenshot alone.
-
-## Framework mapping matrix
-Mappings are review objectives, not findings of legal violation or NIST certification. AI RMF is voluntary; HIPAA applicability and Part 2 handling require legal analysis.
-
-| Review area | NIST CSF 2.0 category | HIPAA review area | AI RMF function | VSQ |
-|---|---|---|---|---|
-| Vendor/dependency governance | GV.SC — supply chain | Risk analysis/management §164.308(a)(1); BA safeguards §164.308(b) | GOVERN | Q06–Q15 |
-| Data purpose and recipients | ID.AM — asset management; GV.OC — context | Permitted use/disclosure and BAA scope §§164.502,164.504(e) | MAP/GOVERN | Q01–Q03,Q06–Q09 |
-| Identity and clinical integration | PR.AA — identity/access | Access, authentication, integrity §164.312(a),(c),(d) | GOVERN/MEASURE | Q14,Q16,Q17 |
-| Build, runtime and transmission | PR.PS — platform security; PR.DS — data security | Risk management; transmission §164.312(e) | MEASURE/MANAGE | Q10–Q18 |
-| Incident handling | DE.CM — monitoring; RS.MA — incident management | Incident procedures §164.308(a)(6); BA notification §164.410 | MANAGE | Q18,Q19 |
-| Clinical validation and continuity | ID.RA — risk assessment; RC.RP — recovery execution | Integrity §164.312(c); contingency §164.308(a)(7); broader clinical safety assessed separately | MEASURE/MANAGE | Q04,Q05,Q20 |
-
-## File structure
-```
-CogniScribe-AI/
-  README.md
-  docs/
-    Vendor_Security_Questionnaire.md
-    Evidence_Gap_Risk_Register.md
-    Executive_Recommendation_Memo.md
-  evidence/
-    README.md
-    Screenshot_gov_reg_badge.png
-    Screenshot_chain_reaction_badge.png
-    lab-dependency-version.png
-    lab-postinstall-script.png
-```
+| Document | Purpose |
+|---|---|
+| [Vendor security questionnaire](docs/Vendor_Security_Questionnaire.md) | Twenty evidence requests covering clinical AI, subprocessors, supply chain and operations |
+| [Evidence-gap risk register](docs/Evidence_Gap_Risk_Register.md) | Ten risk scenarios, evidence gaps, scoring assumptions and risk-specific closure criteria |
+| [Executive procurement memo](docs/Executive_Recommendation_Memo.md) | CISO/committee recommendation and five groups of pre-production conditions |
+| [Technical evidence record](docs/Technical_Evidence_Record.md) | Training provenance and investigation evidence |
 
 ## Assessment boundary
-This is a fictional vendor assessment backed by a completed training investigation. See the executive memo for the procurement decision, the register for scoring, and the evidence record for confidence limits. No actual vendor compromise, ePHI exposure or implemented remediation is claimed.
 
-## Primary references
-- [NIST CSF supply-chain guide](https://csrc.nist.gov/pubs/sp/1305/final)
-- [NIST AI RMF](https://www.nist.gov/itl/ai-risk-management-framework)
-- [HHS Security Rule](https://www.hhs.gov/hipaa/for-professionals/security/laws-regulations/index.html)
-- [HHS Part 2](https://www.hhs.gov/hipaa/part-2/index.html)
-- [npm CI](https://docs.npmjs.com/cli/commands/npm-ci/) and [trusted publishing](https://docs.npmjs.com/trusted-publishers/)
+This is a fictional Tier-1 service handling highly sensitive clinical information. HIPAA and applicable Part 2 obligations guide review; NIST CSF 2.0 and AI RMF inform governance. No real patient data or vendor controls were assessed. Production approval is withheld pending evidence and owner decisions; synthetic-data evaluation is the proposed next step. Detailed risk analysis belongs in the register and approval terms in the memo.
+
+## Repository structure
+
+```text
+README.md
+docs/
+  Vendor_Security_Questionnaire.md
+  Evidence_Gap_Risk_Register.md
+  Executive_Recommendation_Memo.md
+  Technical_Evidence_Record.md
+evidence/
+  Screenshot_gov_reg_badge.png
+  Screenshot_chain_reaction_badge.png
+  lab-dependency-version.png
+  lab-postinstall-script.png
+```

@@ -43,3 +43,17 @@ D0 means hospital authorization of due diligence; targets are proposals. G01–G
 Even projected residual risks remain High for R01–R08. Do not call the vendor low risk or approve by averaging scores. Production requires evidence review, a fresh residual assessment and explicit CISO/business-owner acceptance of each remaining High risk. Very High risk blocks release under this proposed policy. Legal prerequisites and clinical-safety gates remain mandatory; they cannot be overridden through ordinary risk acceptance. Otherwise restrict evaluation to synthetic data.
 
 Sources: [HHS Security Rule](https://www.hhs.gov/hipaa/for-professionals/security/laws-regulations/index.html), [HHS risk analysis](https://www.hhs.gov/hipaa/for-professionals/security/guidance/final-guidance-risk-analysis/index.html), [HHS BA guidance](https://www.hhs.gov/hipaa/for-professionals/privacy/guidance/business-associates/index.html), [HHS Part 2](https://www.hhs.gov/hipaa/part-2/index.html), [NIST AI RMF](https://www.nist.gov/itl/ai-risk-management-framework). These mappings identify review areas, not certification or legal findings.
+
+## Framework mapping matrix
+
+Mappings are review objectives, not findings of legal violation or NIST certification. AI RMF is voluntary; HIPAA applicability and Part 2 handling require legal analysis.
+
+| Review area | NIST CSF 2.0 category | HIPAA review area | AI RMF function | VSQ |
+|---|---|---|---|---|
+| Vendor/dependency governance | GV.SC — supply chain | Risk analysis/management §164.308(a)(1); BA safeguards §164.308(b) | GOVERN | Q06–Q15 |
+| Data purpose and recipients | ID.AM — asset management; GV.OC — context | Permitted use/disclosure and BAA scope §§164.502,164.504(e) | MAP/GOVERN | Q01–Q03,Q06–Q09 |
+| Identity and clinical integration | PR.AA — identity/access | Access, authentication, integrity §164.312(a),(c),(d) | GOVERN/MEASURE | Q14,Q16,Q17 |
+| Build, runtime and transmission | PR.PS — platform security; PR.DS — data security | Risk management; transmission §164.312(e) | MEASURE/MANAGE | Q10–Q18 |
+| Incident handling | DE.CM — monitoring; RS.MA — incident management | Incident procedures §164.308(a)(6); BA notification §164.410 | MANAGE | Q18,Q19 |
+| Clinical validation and continuity | ID.RA — risk assessment; RC.RP — recovery execution | Integrity §164.312(c); contingency §164.308(a)(7); broader clinical safety assessed separately | MEASURE/MANAGE | Q04,Q05,Q20 |
+

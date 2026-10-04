@@ -25,3 +25,13 @@ Completion flags are intentionally omitted from this public-ready record. Comple
 The technical record supports supply-chain questions and tests. It establishes no actual CogniScribe AI incident. Production-readiness claims require vendor evidence, not lab completion.
 
 Training links: [Governance & Regulation](https://tryhackme.com/room/cybergovernanceregulation), [Chain Reaction](https://tryhackme.com/room/chainreaction-bt). Persistence reference: [MITRE T1546.004](https://attack.mitre.org/techniques/T1546/004/).
+
+## Captured investigation artifacts
+
+### E04 — Installed dependency
+![Installed typing-coreutils version](lab-dependency-version.png)
+Shows version 1.6.4 in the suspicious package's manifest. The later continuation prompts record a command-entry error, not successful log searches.
+
+### E05 — Obfuscated install script
+![Captured postinst.js source](lab-postinstall-script.png)
+Shows source printed with cat, including the decoding function and encoded strings. The final key assignment is cut off. This artifact corroborates source inspection but does not independently establish the complete decoded command or execution outcome.

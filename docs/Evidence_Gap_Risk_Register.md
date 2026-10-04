@@ -7,7 +7,7 @@ Likelihood: 1 rare, 2 unlikely, 3 plausible, 4 likely, 5 highly likely. Impact: 
 
 Inherent scores assume clinical data and EHR integration without assurance credit. Likelihood 4 marks direct dependency/identity exposure or central AI processing; 3 marks contingent paths. Impact 5 reflects sensitive clinical content or record integrity; response/continuity risks receive 4 given a proposed manual fallback. Projected likelihood 2 is a conditional target only: controls are assumed effective for the projection but have not been tested. Impact is held constant. Current residual risk is UNKNOWN for every row; no control or risk reduction has been verified.
 
-The requested “HIPAA / NIST AI RMF Violation” column is labeled **Potential obligation / framework alignment**: missing evidence does not establish a legal violation, and NIST AI RMF is voluntary. Specific technology controls below are hospital procurement conditions, not claims that HIPAA mandates npm commands or SBOM formats.
+**Potential obligation / framework alignment** identifies relevant review areas: missing evidence does not establish a legal violation, and NIST AI RMF is voluntary. Specific technology controls below are hospital procurement conditions, not claims that HIPAA mandates npm commands or SBOM formats.
 
 | Risk ID | Vulnerability / Threat Scenario | Inherent Risk Level | Control Deficiency | Potential obligation / framework alignment | Mandatory Compensating Control / Treatment | Projected Residual Risk |
 |---|---|---|---|---|---|---|
@@ -28,16 +28,16 @@ D0 means hospital authorization of due diligence; targets are proposals. G01–G
 
 | Gap / risk | VSQ items | Buyer reviewer | Closure requirement |
 |---|---|---|---|
-| G01 / R01 | Q10–Q13,Q15 | Security engineering | Relevant VSQ artifacts accepted and treatment effectiveness tested; record evidence IDs and reviewer decision |
-| G02 / R02 | Q14 | IAM lead | Relevant VSQ artifacts accepted and treatment effectiveness tested; record evidence IDs and reviewer decision |
-| G03 / R03 | Q15,Q18,Q19 | Security operations | Relevant VSQ artifacts accepted and treatment effectiveness tested; record evidence IDs and reviewer decision |
-| G04 / R04 | Q15–Q18 | Cloud security | Relevant VSQ artifacts accepted and treatment effectiveness tested; record evidence IDs and reviewer decision |
-| G05 / R05 | Q01–Q03 | Privacy lead | Relevant VSQ artifacts accepted and treatment effectiveness tested; record evidence IDs and reviewer decision |
-| G06 / R06 | Q06–Q09 | Privacy/legal | Relevant VSQ artifacts accepted and treatment effectiveness tested; record evidence IDs and reviewer decision |
-| G07 / R07 | Q04,Q05,Q16 | Clinical safety lead | Relevant VSQ artifacts accepted and treatment effectiveness tested; record evidence IDs and reviewer decision |
-| G08 / R08 | Q16–Q18 | EHR integration lead | Relevant VSQ artifacts accepted and treatment effectiveness tested; record evidence IDs and reviewer decision |
-| G09 / R09 | Q19 | Incident response/legal | Relevant VSQ artifacts accepted and treatment effectiveness tested; record evidence IDs and reviewer decision |
-| G10 / R10 | Q08,Q20 | Clinical operations/continuity | Relevant VSQ artifacts accepted and treatment effectiveness tested; record evidence IDs and reviewer decision |
+| G01 / R01 | Q10–Q13,Q15 | Security engineering | Release-linked SBOM reconciled to lockfile; synthetic unapproved postinstall blocked; build isolation and integrity gates tested |
+| G02 / R02 | Q14 | IAM lead | Human publisher MFA and minimal roles verified; CI OIDC binding tested; fallback token scopes, expiry and revocation accepted |
+| G03 / R03 | Q15,Q18,Q19 | Security operations | Synthetic profile modification and disguised interpreter execution detected; isolation/rebuild drill evidence accepted |
+| G04 / R04 | Q15–Q18 | Cloud security | Unauthorized cleartext destination denied in synthetic test; approved encrypted routes and alert response verified |
+| G05 / R05 | Q01–Q03 | Privacy lead | No-training commitments accepted across recipients; endpoint retention settings and queue/deletion tests verified |
+| G06 / R06 | Q06–Q09 | Privacy/legal | Data recipients reconciled to contract chain; legal review of applicable restrictions complete; downstream-change controls accepted |
+| G07 / R07 | Q04,Q05,Q16 | Clinical safety lead | Clinical validation thresholds met on synthetic cases; clinician review and rollback gates demonstrated |
+| G08 / R08 | Q16–Q18 | EHR integration lead | Cross-patient/cross-tenant negative tests pass; API scopes reviewed; token lifecycle and attributable writes demonstrated |
+| G09 / R09 | Q19 | Incident response/legal | Notification terms executed; tabletop shows required contacts, evidence preservation and subprocessor escalation |
+| G10 / R10 | Q08,Q20 | Clinical operations/continuity | Restore meets approved RTO/RPO; clinical fallback and reconciliation exercised; export and deletion obligations accepted |
 
 ## Acceptance rule
 Even projected residual risks remain High for R01–R08. Do not call the vendor low risk or approve by averaging scores. Production requires evidence review, a fresh residual assessment and explicit CISO/business-owner acceptance of each remaining High risk. Very High risk blocks release under this proposed policy. Legal prerequisites and clinical-safety gates remain mandatory; they cannot be overridden through ordinary risk acceptance. Otherwise restrict evaluation to synthetic data.

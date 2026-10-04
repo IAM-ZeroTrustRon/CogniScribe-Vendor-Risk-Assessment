@@ -14,15 +14,20 @@ CogniScribe AI is a fictional ambient clinical documentation platform processing
 | [Executive procurement memo](docs/Executive_Recommendation_Memo.md) | CISO/committee: synthetic evaluation recommendation and production gates |
 | [Technical evidence](evidence/README.md) | Reviewers: completion screenshots, lab findings and confidence boundaries |
 
-## Training to governance
-Chain Reaction completion is evidenced by four tasks and 80 points. Governance & Regulation completion is user-reported with a final-exercise screenshot. The lab dependency differs from the public incident reference: the captured scenario uses typing-coreutils, so public-report package names are not substituted for lab observations.
+## Training evidence
 
-| Lab observation | Vendor governance consequence | VSQ |
-|---|---|---|
-| Injected transitive package and install hook | Review dependency changes and block unapproved lifecycle execution | Q10–Q13 |
-| Obfuscated downloader and HTTP C2 | Isolate builds, constrain egress and test runtime detection | Q15,Q18 |
-| Reported disguised payload/profile persistence | Test startup-change detection and containment; retain raw substantiation | Q18,Q19 |
-| Exposure possible through a trusted component | Establish recipient/data boundaries and minimum EHR permissions; do not assume exfiltration | Q01,Q07,Q16 |
+### Chain Reaction — completion
+![Chain Reaction completion: four tasks and 80 points](evidence/Screenshot_chain_reaction_badge.png)
+
+### Governance & Regulation — final exercise
+![Governance and Regulation final exercise screenshot](evidence/Screenshot_gov_reg_badge.png)
+This captures the exercise flag; full room completion is user-reported.
+
+### Dependency investigation
+![Terminal showing typing-coreutils version 1.6.4](evidence/lab-dependency-version.png)
+The screenshot records the installed suspicious dependency and also captures an unfinished shell command. It does not demonstrate successful execution of every visible command.
+
+[View the captured postinstall script](evidence/lab-postinstall-script.png) and [read the evidence provenance](evidence/README.md). The script screenshot shows obfuscated source; its decoder key and complete decoded behavior are documented from consolidated notes rather than proved by this screenshot alone.
 
 ## Framework mapping matrix
 Mappings are review objectives, not findings of legal violation or NIST certification. AI RMF is voluntary; HIPAA applicability and Part 2 handling require legal analysis.
@@ -48,12 +53,12 @@ CogniScribe-AI/
     README.md
     Screenshot_gov_reg_badge.png
     Screenshot_chain_reaction_badge.png
+    lab-dependency-version.png
+    lab-postinstall-script.png
 ```
 
-## Decision and limitations
-Production approval is withheld. All vendor gaps are open; current residual risk is unknown. Projected treatment leaves eight High and two Moderate risks, requiring fresh evidence-based assessment and explicit owner decisions. Clinical/legal gates cannot be replaced by technical risk acceptance.
-
-Some forensic details came from consolidated notes rather than raw artifacts visible in this chat; see the evidence record. No actual ePHI exposure, patient harm, credential theft or vendor remediation is claimed. This documentation package has been assembled locally; GitHub publication is not yet verified.
+## Assessment boundary
+This is a fictional vendor assessment backed by a completed training investigation. See the executive memo for the procurement decision, the register for scoring, and the evidence record for confidence limits. No actual vendor compromise, ePHI exposure or implemented remediation is claimed.
 
 ## Primary references
 - [NIST CSF supply-chain guide](https://csrc.nist.gov/pubs/sp/1305/final)

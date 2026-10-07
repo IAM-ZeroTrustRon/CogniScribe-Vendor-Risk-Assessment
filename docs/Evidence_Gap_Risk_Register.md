@@ -9,7 +9,7 @@ Inherent scores assume clinical data and EHR integration without assurance credi
 
 **Potential obligation / framework alignment** identifies relevant review areas: missing evidence does not establish a legal violation, and NIST AI RMF is voluntary. Specific technology controls below are hospital procurement conditions, not claims that HIPAA mandates npm commands or SBOM formats.
 
-| Risk ID | Vulnerability / Threat Scenario | Inherent Risk Level | Control Deficiency | Potential obligation / framework alignment | Mandatory Compensating Control / Treatment | Projected Residual Risk |
+| Risk ID | Vulnerability / Threat Scenario | Inherent Risk Level | Evidence Gap — Unverified / Pending | Potential obligation / framework alignment | Mandatory Compensating Control / Treatment | Conditional Residual Risk — projected, not achieved |
 |---|---|---|---|---|---|---|
 | R01 | Compromised transitive dependency executes during installation; a clinical service build could expose credentials or alter deployed software | 4 x 5 = 20 — Very High | G01: no release-specific SBOM, dependency-review or install-hook evidence | §164.308(a)(1)(ii)(A)–(B); AI RMF GOVERN/MANAGE | SBOM + SCA; approved lockfile/integrity/provenance; default --ignore-scripts and isolated exceptions; restricted build secrets/egress | 2 x 5 = 10 — High |
 | R02 | Stolen publisher credential enables a trusted-looking malicious release | 4 x 5 = 20 — Very High | G02: publishing access and credential lifecycle unsubstantiated | §164.312(a),(d); AI RMF GOVERN | FIDO2 for interactive users; OIDC publishing; tightly scoped expiring fallback tokens; reviewed releases | 2 x 5 = 10 — High |

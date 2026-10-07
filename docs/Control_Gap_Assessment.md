@@ -1,0 +1,20 @@
+# Procurement Control Objectives and Evidence Gates
+
+**Fictional CogniScribe AI | October 6, 2026 | No vendor responses received**
+
+This review guide translates four domains into artifacts and acceptance tests. It is an evidence-gap assessment, not a finding that the vendor lacks controls. All domains are **Unverified / Pending**. NIST outcomes support review objectives; ISO/IEC 27001 provides management-system context, not a certification claim or unverified Annex A mapping.
+
+| Domain / linked risks | Control objective | Audit artifacts | What a satisfactory answer looks like | What establishes a gap | Recommendation / reviewer |
+|---|---|---|---|---|---|
+| Access control — R02/R08; Q14/Q16/Q17 | Restrict publishing, support and EHR integration to approved identities and minimum scope | Role/grant exports, MFA enforcement, CI identity binding, EHR scope inventory, rotation and tenant-denial tests | Approved users/actions work; unauthorized roles/tenants fail; short-lived credentials and accountable writes | Reviewed evidence shows excessive privileges or a failed required denial test; absent evidence remains an assurance gap | IAM/security reviewers accept tested least privilege, lifecycle and attribution before production |
+| Asset and data management — R05/R06/R07/R10; Q01–Q09/Q20 | Know recipients, copies, purposes, retention and clinical dependencies | Data flow, model/endpoint/subprocessor inventory, terms, approved retention, synthetic deletion/export and clinical tests | Actual configured paths match inventory; no-training/retention obligations align with endpoint behavior; clinician review and continuity validated | Unapproved recipient/use, inconsistent retention, or failure of an approved clinical/exit requirement demonstrated | Privacy/legal/clinical reviewers accept scope, restrictions and usable exit/fallback; no ePHI until gates close |
+| Incident management — R03/R04/R09; Q18/Q19 | Detect suspicious installation/runtime behavior, preserve evidence and coordinate containment | Synthetic detection tests, event records, isolation/rebuild playbook, notice terms and exercise | Required scenarios detected and escalated; token revocation and evidence preservation work; agreed notice terms flow downstream | A required event or response step fails a scoped test; missing exercise evidence remains pending | Security operations and legal reviewers accept detection, response and notification evidence |
+| Supply chain — R01/R02/R03/R04; Q10–Q15 | Control dependencies, install hooks, build secrets and publishing provenance | Release SBOM, lockfile/integrity reconciliation, SCA gates, script exceptions, ephemeral runner and egress tests | Inventory matches release; unapproved hooks blocked; allowed exceptions isolated; no production tokens/ePHI in builds | Unapproved install code runs, integrity checks fail open, or build path reaches prohibited secrets/destinations | Security engineering/IAM reviewers accept release-linked controls and synthetic negative tests |
+
+NIST CSF 2.0 relevance: PR.AA (identity/access), ID.AM (inventory), GV.SC (supply chain), DE.CM (monitoring) and RS.MA (response). AI RMF GOVERN/MAP/MEASURE/MANAGE informs model governance and clinical validation. These mappings do not establish legal conformity.
+
+Accept evidence only after checking product/tenant/release scope, date, accountable owner, exceptions and test effectiveness. A questionnaire answer or report receipt alone earns no assurance credit. Link unresolved tests to the existing ten-risk register; current residual risk remains unknown. Its conditional residual scores are projections, not achieved improvements.
+
+Sources: [NIST CSF](https://www.nist.gov/cyberframework), [NIST AI RMF](https://www.nist.gov/itl/ai-risk-management-framework), [ISO/IEC 27001:2022](https://www.iso.org/standard/27001), [HHS cloud guidance](https://www.hhs.gov/hipaa/for-professionals/special-topics/health-information-technology/cloud-computing/index.html).
+
+[Questionnaire](Vendor_Security_Questionnaire.md) · [Risk register](Evidence_Gap_Risk_Register.md) · [Release decision](Executive_Recommendation_Memo.md)

@@ -21,10 +21,13 @@ See the [technical evidence record](docs/Technical_Evidence_Record.md) for scree
 |---|---|
 | [Vendor security questionnaire](docs/Vendor_Security_Questionnaire.md) | Twenty evidence requests covering clinical AI, subprocessors, supply chain and operations |
 | [Evidence-gap risk register](docs/Evidence_Gap_Risk_Register.md) | Ten risk scenarios, evidence gaps, scoring assumptions and risk-specific closure criteria |
+| [Control objectives and evidence gates](docs/Control_Gap_Assessment.md) | Access, asset/data, incident and supply-chain objectives with artifacts and acceptance tests |
 | [Executive procurement memo](docs/Executive_Recommendation_Memo.md) | CISO/committee recommendation and five groups of pre-production conditions |
 | [Technical evidence record](docs/Technical_Evidence_Record.md) | Training provenance and investigation evidence |
 
 ## Assessment boundary
+
+**Procurement position:** synthetic-data evaluation only; production integration withheld. All vendor assurance is pending. Missing vendor evidence is an evidence gap, not proof of a failed control. Projected residual scores are conditional targets; no risk reduction is credited before effectiveness review and owner acceptance.
 
 This is a fictional Tier-1 service handling highly sensitive clinical information. HIPAA and applicable Part 2 obligations guide review; NIST CSF 2.0 and AI RMF inform governance. No real patient data or vendor controls were assessed. Production approval is withheld pending evidence and owner decisions; synthetic-data evaluation is the proposed next step. Detailed risk analysis belongs in the register and approval terms in the memo.
 

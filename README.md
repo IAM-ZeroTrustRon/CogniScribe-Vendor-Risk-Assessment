@@ -1,4 +1,6 @@
-# Healthcare AI Vendor Risk Assessment & Supply Chain Governance
+# CogniScribe — Healthcare AI Vendor Risk Assessment
+
+[Portfolio index](https://github.com/IAM-ZeroTrustRon/GRC-IAM-Portfolio) · **Repository role:** Fictional third-party risk assessment.
 
 **Ron Richardson | Healthcare GRC & IAM Portfolio — Project 2**
 
